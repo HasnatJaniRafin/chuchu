@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     final foodNames = ['Delight', 'Epicurean', 'Savory', 'Taste', 'Gourmet', 'Palate', 'Flavor', 'Essence', 'Aroma', 'Zest']; // A list of name parts for the random name
     final historyTemplate = 'This dish has a rich history dating back centuries. It is beloved in many cultures and has evolved through the ages. Its unique blend of flavors and ingredients make it a timeless classic. Not only is it a culinary treat, but it also offers a glimpse into the heritage and traditions from which it originates. Every bite tells a story of discovery, innovation, and passion. It represents a fusion of culinary excellence and historical significance.'; // A template history about 100 words
 
-    return List.generate(50, (i) {
+    return List.generate(52, (i) {
       // Create a random food name
       String name = '${foodNames[random.nextInt(foodNames.length)]} ${foodNames[random.nextInt(foodNames.length)]}';
 
