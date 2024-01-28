@@ -20,14 +20,14 @@ class HomePage extends StatelessWidget {
     return items;
   }
 
-
   @override
   Widget build(BuildContext context) {
-    List<FoodItem> foodItems = generateFoodItems();
+    // Corrected method name here
+    List<FoodItem> foodItems = generateFoodItemsWithImages();
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('All Food '),
+        title: Text('All Food'),
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(10),
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                 ),
               );
             },
-            child: Image.asset(foodItems[i].imageUrl, fit: BoxFit.cover), // Placeholder image
+            child: Image.asset(foodItems[i].imageUrl, fit: BoxFit.cover),
           ),
           footer: GridTileBar(
             backgroundColor: Colors.black54,
