@@ -1,5 +1,6 @@
+// food_detail_page.dart
 import 'package:flutter/material.dart';
-import 'food_item.dart'; // Import the FoodItem model
+import 'food_item.dart'; // Ensure this file exists and contains the FoodItem class
 
 class FoodDetailPage extends StatelessWidget {
   final FoodItem foodItem;
@@ -14,15 +15,16 @@ class FoodDetailPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[
-            Image.asset(foodItem.imageUrl), // Display the food image
-            Text(foodItem.name), // Display the food name
-            Text("\$${foodItem.price}"), // Display the food price
+          children: [
+            Image.asset(foodItem.imageUrl, fit: BoxFit.cover), // Display the food image
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(foodItem.history), // Display the food history
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                foodItem.history,
+                style: TextStyle(fontSize: 16.0), // Display the food history
+              ),
             ),
-            // Implement the favorite button here
+            // You can add more details here if needed
           ],
         ),
       ),
