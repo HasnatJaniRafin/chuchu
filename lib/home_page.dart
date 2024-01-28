@@ -4,18 +4,22 @@ import 'food_detail_page.dart'; // Ensure you create this file
 
 class HomePage extends StatelessWidget {
   // Generating a mock list of 50 food items
-  List<FoodItem> generateFoodItems() {
-    return List.generate(
-      50,
-          (i) => FoodItem(
-        id: '$i',
-        name: 'Food Item $i',
-        imageUrl: 'assets/1.png', // Placeholder image, replace with actual
-        price: (i + 1) * 2.0,
-        history: 'This is the history of food item $i.',
-      ),
-    );
+  List<FoodItem> generateFoodItemsWithImages() {
+    List<FoodItem> items = [];
+    for (int i = 1; i <= 50; i++) {
+      items.add(
+        FoodItem(
+          id: '$i',
+          name: 'Food Item $i',
+          imageUrl: 'assets/$i.png', // Dynamically generate the image URL
+          price: i * 5.0, // Example price, adjust as needed
+          history: 'Description for Food Item $i.',
+        ),
+      );
+    }
+    return items;
   }
+
 
   @override
   Widget build(BuildContext context) {
