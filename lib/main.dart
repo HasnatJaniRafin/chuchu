@@ -35,7 +35,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
     SearchPage(),
     MePage(),
   ];
-
+  
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
