@@ -57,7 +57,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search Foods'),
+        title: Text('Refresh Foods List'),
         actions: [
           IconButton(
             icon: Icon(Icons.refresh),
