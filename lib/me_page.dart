@@ -60,8 +60,8 @@ class MePage extends StatelessWidget {
               child: Column(
                 children: [
                   CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/logo.png'), // Replace with actual image path for ChuChu
+                    radius:150,
+                    backgroundImage: AssetImage('assets/53.png'), // Replace with actual image path for ChuChu
                   ),
                   SizedBox(height: 8),
                   Text(
