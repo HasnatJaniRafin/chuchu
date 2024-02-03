@@ -69,8 +69,8 @@ class MePage extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   SizedBox(height: 8),
-                  Text('Age: 5'), // Replace with actual age
-                  Text('Nationality: Chinese'), // Replace with actual nationality
+                  Text('v1.0'),
+                  Text('Food Lover'),
                   SizedBox(height: 16),
                   Text(
                     'ChuChu loves to explore the world of Chinese cuisine. From the savory dumplings to the sweet tang of a good char siu, ChuChu enjoys every bit of the culinary adventure.',
