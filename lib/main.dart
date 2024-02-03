@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'search_page.dart';
-import 'me_page.dart';
+import 'home_page.dart';  // Your HomePage widget
+import 'quiz_page.dart';  // Your QuizPage widget
+import 'search_page.dart';  // Your SearchPage widget
+import 'me_page.dart';  // Your MePage widget
 
 void main() => runApp(ChuChuApp());
 
@@ -12,7 +13,8 @@ class ChuChuApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ChuChu',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MainNavigationPage(),
     );
@@ -29,6 +31,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
 
   final List<Widget> _pages = [
     HomePage(),
+    QuizPage(),
     SearchPage(),
     MePage(),
   ];
@@ -47,10 +50,15 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
         children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        type: BottomNavigationBarType.fixed, // This ensures all items show
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.quiz),
+            label: 'Quiz',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
@@ -62,7 +70,8 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.purple,
+        unselectedItemColor: Colors.grey, // Ensures unselected items are visible
         onTap: _onItemTapped,
       ),
     );

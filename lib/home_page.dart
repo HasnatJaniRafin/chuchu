@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('All Food'),
+        title: Text('ChuChu - Learn about food'),
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(10),
